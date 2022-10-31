@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPS</title>
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Rock Paper Scisors</h1>
+  <section class="game score">
+    <h2>Player score: <span id="playerScore">0</span></h2>
+    <h2>Computer score: <span id="computerScore">0</span></h2>
+  </section>
+  <section class="game choices">
+    <p>Player choice: <span id="playerChoose"></span></p>
+    <p>Computer choice: <span id="computerChoose"></span></p>
+  </section>
+  <section class="game">
+    <section class="player buttons">
+      <button class="rock button" id="playerRock">Rock</button>
+      <button class="paper" id="playerPaper">Paper</button>
+      <button class="scisor" id="playerScisors">Scisors</button>
+    </section>
+    <section class="computer buttons">
+      <button class="rock" id="pcRock">Rock</button>
+      <button class="paper" id="pcPaper">Paper</button>
+      <button class="scisor" id="pcScisors">Scisors</button>
+    </section>
+  </section>
+  <section class="settings">
+    <button id="resetBtn">Reset</button>
+  </section>
+</body>
+
+</html>
