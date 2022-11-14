@@ -6,6 +6,8 @@ let compChoice = document.querySelector('#computerChoose')
 let playerScore = document.querySelector('#playerScore')
 let compScore = document.querySelector('#computerScore')
 
+let actionImage = document.querySelector('#chosenImg')
+
 let cScore = 0
 let pScore = 0
 
@@ -40,6 +42,17 @@ const computerChoice = () => {
 const showChoices = (pC, cC) => {
   playerChoice.textContent = pC
   compChoice.textContent = cC
+  imageSetter(pC,cC)
+}
+
+const imageSetter = (pC, cC) => {
+  actionImage.classList.remove('reverseClass')
+  if(pC=='Scisors' || pC==cC) {
+    actionImage.src = `./images/${pC}${cC}.gif`
+  }else if(cC=='Scisors'){
+    actionImage.src = `./images/${cC}${pC}.gif`
+    actionImage.classList.add('reverseClass')
+  }
 }
 
 const pickWinner = (player, comp) => {
