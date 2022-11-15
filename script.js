@@ -26,6 +26,7 @@ const resetGame = () => {
   playerScore.textContent = pScore
   compScore.textContent = cScore
   showChoices('xxx', 'xxx')
+  actionImage.src = `./images/StartGif.gif`
 }
 
 resetBtn.addEventListener('click', resetGame)
@@ -47,9 +48,9 @@ const showChoices = (pC, cC) => {
 
 const imageSetter = (pC, cC) => {
   actionImage.classList.remove('reverseClass')
-  if(pC=='Scisors' || pC==cC) {
+  if(pC=='Scisors' || pC==cC || (pC=='Rock' && cC=='Paper')) {
     actionImage.src = `./images/${pC}${cC}.gif`
-  }else if(cC=='Scisors'){
+  }else{
     actionImage.src = `./images/${cC}${pC}.gif`
     actionImage.classList.add('reverseClass')
   }
