@@ -43,24 +43,21 @@ const computerChoice = () => {
 const showChoices = (pC, cC) => {
   playerChoice.textContent = pC
   compChoice.textContent = cC
-  imageSetter(pC,cC)
+  imageSetter(pC, cC)
 }
 
 const imageSetter = (pC, cC) => {
   actionImage.classList.remove('reverseClass')
-  if(pC=='Scisors' || pC==cC || (pC=='Rock' && cC=='Paper')) {
+  if (pC == 'Scisors' || pC == cC || (pC == 'Rock' && cC == 'Paper')) {
     actionImage.src = `./images/${pC}${cC}.gif`
-  }else{
+  } else {
     actionImage.src = `./images/${cC}${pC}.gif`
     actionImage.classList.add('reverseClass')
   }
 }
 
 const pickWinner = (player, comp) => {
-  if (player == comp) {
-    console.log('It\'s a tie!')
-    return
-  }
+  if (player == comp) return
   if (player == 'Rock') {
     comp == 'Paper' ? increaseScore('comp') : increaseScore('player')
   } else if (player == 'Paper') {
@@ -72,11 +69,9 @@ const pickWinner = (player, comp) => {
 
 const increaseScore = (whoWin) => {
   if (whoWin == 'player') {
-    console.log('Player win!')
     pScore++
     playerScore.textContent = pScore
   } else {
-    console.log('Player lost')
     cScore++
     compScore.textContent = cScore
   }

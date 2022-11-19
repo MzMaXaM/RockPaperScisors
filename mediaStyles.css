@@ -1,0 +1,79 @@
+
+@media screen and (max-width: 900px) {
+  .game {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .choices {
+    display: none;
+  }
+  .score {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1, h2 {
+    margin: 0.5rem;
+  }
+  .computer>button {
+    display: none;
+  }
+  .score {
+    flex-direction: column;
+    /* padding: 1rem; */
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    margin: 0.5rem;
+  }
+  .score h2 {
+    margin: 0;
+  }
+  .game {
+    flex-direction: column;
+    gap: 0;
+  }
+  .buttons {
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  button {
+    width: 90%;
+  }
+  #resetBtn {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  h1, h2 {
+    margin: 0.5rem;
+  }
+  body {
+    text-align: start;
+    max-width: 60%;
+    margin: 0;
+  }
+  .computer>button {
+    display: none;
+  }
+  .image {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+  .choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
