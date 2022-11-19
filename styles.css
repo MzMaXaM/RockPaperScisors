@@ -1,6 +1,12 @@
+:root {
+  --darkGreen: #0e4e2c;
+  --white: #ffffff;
+}
+
 body {
   background-color: darkolivegreen;
   color: aliceblue;
+  text-align: center;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -18,14 +24,13 @@ h2 {
 }
 
 .image img {
-  width: 480px;
-  height: 480px;
+  width: 80%;
 }
 
 .game {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 .buttons {
@@ -33,19 +38,24 @@ h2 {
   gap: 1rem;
 }
 
-.game button {
-  width: 5rem;
+button {
+  width: 8.5rem;
   height: 4rem;
+  border: 2px solid black;
   border-radius: 6px;
   font-weight: 800;
+  font-size: 1rem;
+  transition: ease-out 0.4s;
+}
+
+.game button {
+  box-shadow: inset 0 0 0 0 var(--darkGreen);
 }
 
 .player>button:hover {
-  background-color: bisque;
-}
-
-.player>button:active {
-  background-color: orange;
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: inset 400px 0 0 0 var(--darkGreen);
 }
 
 .computer button {
@@ -58,19 +68,14 @@ h2 {
 }
 
 #resetBtn {
-  width: 5rem;
-  height: 2rem;
-  border-radius: 5px;
   margin-top: 5em;
   font-weight: 700;
 }
 
 #resetBtn:hover {
-  background-color: burlywood;
-}
-
-#resetBtn:active {
-  background-color: orange;
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 50px var(--darkGreen);
 }
 
 .reverseClass {
